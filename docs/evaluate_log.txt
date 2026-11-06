@@ -1,0 +1,19 @@
+predictors: gru, lstm, mlp, ctrv, cv, static  (device cuda)
+  GRU (RNN)                ADE  18.10  1s  24.67  FDE  44.68
+  LSTM (RNN)               ADE  17.93  1s  24.48  FDE  44.34
+  MLP (feed-forward NN)    ADE  19.56  1s  26.80  FDE  47.19
+  Constant turn rate       ADE  34.00  1s  45.91  FDE  87.31
+  Constant velocity        ADE  33.59  1s  45.96  FDE  77.74
+  Static (no prediction)   ADE  58.43  1s  76.36  FDE 108.56
+  GRU (RNN)                hit rate  75.0 %  (4400 shots)
+  LSTM (RNN)               hit rate  74.3 %  (4400 shots)
+  MLP (feed-forward NN)    hit rate  70.9 %  (4400 shots)
+  Constant turn rate       hit rate  56.6 %  (4400 shots)
+  Constant velocity        hit rate  55.1 %  (4400 shots)
+  Static (no prediction)   hit rate  35.1 %  (4400 shots)
+  GRU vs LSTM (RNN)               91:109 (draws 0)  accuracy 63.5 % vs 66.1 %
+  GRU vs MLP (feed-forward NN)    100:96 (draws 4)  accuracy 65.4 % vs 64.2 %
+  GRU vs Constant turn rate       136:64 (draws 0)  accuracy 67.2 % vs 50.6 %
+  GRU vs Constant velocity        126:72 (draws 2)  accuracy 66.5 % vs 52.6 %
+  GRU vs Static (no prediction)   184:16 (draws 0)  accuracy 66.5 % vs 28.0 %
+results written to docs/results.json, docs/results.md and docs/img/ (150.1 s)

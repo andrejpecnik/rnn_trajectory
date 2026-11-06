@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# generated datasets (re-create with: python -m tankgame generate ...)
+data/
+
+# editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
